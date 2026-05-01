@@ -10,8 +10,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
         #sidebar { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .active-link { border-left: 4px solid #6366f1; background-color: #f5f3ff; color: #4f46e5; font-weight: 700; }
-        .hidden { display: none; }
+        .nav-link.active { border-left: 4px solid #6366f1; background-color: #f5f3ff; color: #4f46e5; font-weight: 700; }
+        .card-hover { transition: all 0.2s ease; }
+        .card-hover:active { transform: scale(0.98); background-color: #f8fafc; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -20,9 +21,9 @@
     <header class="lg:hidden sticky top-0 z-[60] px-6 py-4 bg-white/95 backdrop-blur-md border-b flex justify-between items-center shadow-sm">
         <div>
             <h1 class="font-bold text-lg text-indigo-600">35 Villier St</h1>
-            <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Guest Guide</p>
+            <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Guest Concierge</p>
         </div>
-        <button onclick="toggleSidebar(true)" class="w-12 h-12 flex items-center justify-center text-2xl text-slate-600 bg-slate-50 rounded-full">
+        <button onclick="toggleSidebar(true)" class="w-10 h-10 flex items-center justify-center text-xl text-slate-600 bg-slate-50 rounded-full">
             <i class="fas fa-bars"></i>
         </button>
     </header>
@@ -30,172 +31,220 @@
     <div id="overlay" onclick="toggleSidebar(false)" class="fixed inset-0 bg-slate-900/60 z-[70] hidden backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
 
     <div class="flex min-h-screen">
-        <!-- Sidebar -->
-        <nav id="sidebar" class="fixed inset-y-0 left-0 w-72 bg-white border-r z-[80] lg:relative lg:translate-x-0 -translate-x-full flex flex-col h-screen">
+        <!-- Sidebar Navigation -->
+        <nav id="sidebar" class="fixed inset-y-0 left-0 w-72 bg-white border-r z-[80] lg:sticky lg:top-0 lg:translate-x-0 -translate-x-full flex flex-col h-screen">
             <div class="p-8">
                 <h1 class="font-bold text-2xl text-indigo-600 leading-tight">Guest Guide</h1>
-                <p class="text-sm text-slate-400">35 Villier Street</p>
+                <p class="text-sm text-slate-400">Leamington Spa</p>
             </div>
             
-            <div class="flex-1 px-4 space-y-1 overflow-y-auto">
-                <button onclick="navigateTo('home')" id="btn-home" class="nav-btn w-full flex items-center px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-600 transition-all">
-                    <i class="fas fa-map-marked-alt w-8 text-indigo-500"></i> Local Area
-                </button>
-                <button onclick="navigateTo('house')" id="btn-house" class="nav-btn w-full flex items-center px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-600 transition-all">
-                    <i class="fas fa-home w-8 text-indigo-500"></i> House Rules
-                </button>
-                <button onclick="navigateTo('dining')" id="btn-dining" class="nav-btn w-full flex items-center px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-600 transition-all">
+            <div class="flex-1 px-4 space-y-1">
+                <a href="#welcome" onclick="toggleSidebar(false)" class="nav-link flex items-center px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-600 transition-all">
+                    <i class="fas fa-door-open w-8 text-indigo-500"></i> Welcome
+                </a>
+                <a href="#house" onclick="toggleSidebar(false)" class="nav-link flex items-center px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-600 transition-all">
+                    <i class="fas fa-home w-8 text-indigo-500"></i> House Info
+                </a>
+                <a href="#parks" onclick="toggleSidebar(false)" class="nav-link flex items-center px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-600 transition-all">
+                    <i class="fas fa-tree w-8 text-indigo-500"></i> Parks & Castles
+                </a>
+                <a href="#dining" onclick="toggleSidebar(false)" class="nav-link flex items-center px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-600 transition-all">
                     <i class="fas fa-utensils w-8 text-indigo-500"></i> Eat & Drink
-                </button>
+                </a>
             </div>
             
-            <div class="p-6 border-t text-center">
-                <p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest mb-2">Emergency</p>
-                <p class="text-xs font-bold text-red-500">Call 999 for Emergencies</p>
+            <div class="p-6 border-t text-center space-y-4">
+                <div class="bg-red-50 p-3 rounded-xl">
+                    <p class="text-[10px] text-red-400 uppercase font-bold tracking-widest mb-1">Emergency</p>
+                    <p class="text-xs font-bold text-red-600">Dial 999</p>
+                </div>
+                <button onclick="window.print()" class="text-xs text-slate-400 hover:text-slate-600"><i class="fas fa-print mr-1"></i> Print Guide</button>
             </div>
         </nav>
 
-        <!-- Main Content -->
-        <main class="flex-1 w-full max-w-4xl mx-auto px-4 py-8 lg:py-16 pb-24">
+        <!-- Main Content (All One Page) -->
+        <main class="flex-1 w-full max-w-4xl mx-auto px-4 py-8 lg:py-16 space-y-20 pb-32">
             
-            <!-- HOME PAGE -->
-            <div id="page-home" class="page-view space-y-10">
-                <section class="text-center py-10 bg-white rounded-3xl border border-slate-100 shadow-sm">
-                    <h2 class="text-3xl lg:text-5xl font-black mb-4 text-slate-900">Welcome!</h2>
-                    <p class="text-slate-500 max-w-md mx-auto px-6">Explore the best of Leamington Spa right from your doorstep.</p>
-                </section>
+            <!-- SECTION: WELCOME -->
+            <section id="welcome" class="scroll-mt-24">
+                <div class="text-center py-12 bg-white rounded-3xl border border-slate-100 shadow-sm px-6">
+                    <div class="inline-block px-4 py-1 bg-indigo-50 text-indigo-600 rounded-full text-xs font-bold uppercase tracking-widest mb-4">Now Hosting You</div>
+                    <h2 class="text-3xl lg:text-5xl font-black mb-4 text-slate-900">Welcome to 35 Villier St</h2>
+                    <p class="text-slate-500 max-w-md mx-auto">We've put together our favorite local spots and house essentials to make your stay perfect.</p>
+                </div>
+            </section>
 
-                <section>
-                    <h3 class="text-xl font-bold mb-6 flex items-center"><i class="fas fa-parking mr-3 text-blue-500"></i> Parking</h3>
-                    <div class="bg-blue-50 border border-blue-100 p-6 rounded-2xl">
-                        <p class="text-sm text-blue-900 leading-relaxed"><strong>Free on-street parking</strong> is available right here on Villier Street. Be aware that as you move closer to the town centre, permits or payments are required.</p>
+            <!-- SECTION: HOUSE INFO -->
+            <section id="house" class="scroll-mt-24 space-y-8">
+                <h3 class="text-2xl font-black flex items-center"><i class="fas fa-home mr-4 text-indigo-500"></i> House Essentials</h3>
+                
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-2xl border shadow-sm space-y-3">
+                        <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center"><i class="fas fa-parking"></i></div>
+                        <h4 class="font-bold">Free Parking</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">Parking is free on this road. Note that town centre streets usually require permits or payment.</p>
                     </div>
-                </section>
-
-                <section>
-                    <h3 class="text-xl font-bold mb-6 flex items-center"><i class="fas fa-tree mr-3 text-green-500"></i> Parks & Outdoors</h3>
-                    <div class="grid gap-4">
-                        <div class="bg-white p-5 rounded-2xl border shadow-sm">
-                            <h4 class="font-bold">Villier Street Rec</h4>
-                            <p class="text-sm text-slate-500">3 min walk to the left. Great for dogs and has a children's play area.</p>
-                        </div>
-                        <div class="bg-white p-5 rounded-2xl border shadow-sm">
-                            <h4 class="font-bold">Jephson Gardens</h4>
-                            <p class="text-sm text-slate-500">Features a Japanese Garden, boat hire, and lovely tea rooms.</p>
-                        </div>
-                        <div class="grid grid-cols-2 gap-3">
-                            <div class="bg-slate-100 p-3 rounded-xl text-center text-[10px] font-bold uppercase">Victoria Park</div>
-                            <div class="bg-slate-100 p-3 rounded-xl text-center text-[10px] font-bold uppercase">Newbold Comyn</div>
-                        </div>
+                    <div class="bg-white p-6 rounded-2xl border shadow-sm space-y-3">
+                        <div class="w-10 h-10 bg-orange-50 text-orange-600 rounded-full flex items-center justify-center"><i class="fas fa-thermometer-half"></i></div>
+                        <h4 class="font-bold">Heating</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">Thermostat is located in the hall by the stairs. Please adjust as needed for your comfort.</p>
                     </div>
-                </section>
+                    <div class="bg-white p-6 rounded-2xl border shadow-sm space-y-3">
+                        <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center"><i class="fas fa-tshirt"></i></div>
+                        <h4 class="font-bold">Wardrobes</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed">Front bedroom has its own. Back bedroom guests should use the landing wardrobe.</p>
+                    </div>
+                    <div class="bg-red-50 border border-red-100 p-6 rounded-2xl space-y-3">
+                        <div class="w-10 h-10 bg-red-100 text-red-600 rounded-full flex items-center justify-center"><i class="fas fa-hot-tub"></i></div>
+                        <h4 class="font-bold text-red-900">Hot Tub</h4>
+                        <p class="text-sm text-red-700 leading-relaxed">The hot tub is currently <strong>not in use</strong>. Please do not uncover or attempt to use.</p>
+                    </div>
+                </div>
+            </section>
 
-                <section>
-                    <h3 class="text-xl font-bold mb-6 flex items-center"><i class="fas fa-fort-awesome mr-3 text-purple-500"></i> Historic Castles</h3>
+            <!-- SECTION: PARKS & CASTLES -->
+            <section id="parks" class="scroll-mt-24 space-y-8">
+                <h3 class="text-2xl font-black flex items-center"><i class="fas fa-map-marker-alt mr-4 text-green-500"></i> Explore the Area</h3>
+                
+                <div class="space-y-4">
+                    <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest">Leamington Parks</h4>
                     <div class="grid sm:grid-cols-2 gap-4">
-                        <div class="bg-indigo-900 p-6 rounded-2xl text-white">
-                            <h4 class="font-bold mb-1">Warwick Castle</h4>
-                            <p class="text-xs text-indigo-200">~10 min drive. A world-famous historic fortress.</p>
-                        </div>
-                        <div class="bg-slate-800 p-6 rounded-2xl text-white">
-                            <h4 class="font-bold mb-1">Kenilworth Castle</h4>
-                            <p class="text-xs text-slate-300">~20 min drive. Stunning Elizabethan ruins.</p>
-                        </div>
+                        <a href="https://www.google.com/maps/search/Villier+Street+Recreation+Ground" target="_blank" class="card-hover bg-white p-5 rounded-2xl border flex items-center justify-between">
+                            <div><h5 class="font-bold">Villier St Rec</h5><p class="text-xs text-slate-500">3 min walk - Dogs & Kids</p></div>
+                            <i class="fas fa-chevron-right text-slate-300"></i>
+                        </a>
+                        <a href="https://www.google.com/maps/search/Jephson+Gardens" target="_blank" class="card-hover bg-white p-5 rounded-2xl border flex items-center justify-between">
+                            <div><h5 class="font-bold">Jephson Gardens</h5><p class="text-xs text-slate-500">Boats, Tea & Flowers</p></div>
+                            <i class="fas fa-chevron-right text-slate-300"></i>
+                        </a>
+                        <a href="https://www.google.com/maps/search/Victoria+Park+Leamington" target="_blank" class="card-hover bg-white p-5 rounded-2xl border flex items-center justify-between">
+                            <div><h5 class="font-bold">Victoria Park</h5><p class="text-xs text-slate-500">Riverside walks</p></div>
+                            <i class="fas fa-chevron-right text-slate-300"></i>
+                        </a>
+                        <a href="https://www.google.com/maps/search/Newbold+Comyn" target="_blank" class="card-hover bg-white p-5 rounded-2xl border flex items-center justify-between">
+                            <div><h5 class="font-bold">Newbold Comyn</h5><p class="text-xs text-slate-500">Wide open spaces</p></div>
+                            <i class="fas fa-chevron-right text-slate-300"></i>
+                        </a>
                     </div>
-                </section>
-            </div>
+                </div>
 
-            <!-- HOUSE PAGE -->
-            <div id="page-house" class="page-view space-y-10 hidden">
-                <section class="bg-white p-8 rounded-3xl border shadow-sm">
-                    <h2 class="text-2xl font-black mb-6">Stay Information</h2>
-                    <div class="space-y-6">
-                        <div class="flex gap-4">
-                            <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-tshirt"></i></div>
-                            <div>
-                                <h4 class="font-bold">Wardrobes</h4>
-                                <p class="text-sm text-slate-500">Front Bedroom has its own. Back Bedroom uses the wardrobe on the landing.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-thermometer-half"></i></div>
-                            <div>
-                                <h4 class="font-bold">Heating</h4>
-                                <p class="text-sm text-slate-500">The thermostat is located in the hall by the stairs.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="w-10 h-10 bg-green-100 text-green-600 rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-coffee"></i></div>
-                            <div>
-                                <h4 class="font-bold">Refreshments</h4>
-                                <p class="text-sm text-slate-500">Please help yourself to the provided Tea and Coffee.</p>
-                            </div>
-                        </div>
+                <div class="space-y-4 pt-4">
+                    <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest">Nearby Landmarks</h4>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <a href="https://www.google.com/maps/search/Warwick+Castle" target="_blank" class="card-hover bg-indigo-900 p-6 rounded-2xl text-white flex items-center justify-between">
+                            <div><h5 class="font-bold">Warwick Castle</h5><p class="text-xs opacity-70">10 min drive</p></div>
+                            <i class="fas fa-external-link-alt opacity-50"></i>
+                        </a>
+                        <a href="https://www.google.com/maps/search/Kenilworth+Castle" target="_blank" class="card-hover bg-slate-800 p-6 rounded-2xl text-white flex items-center justify-between">
+                            <div><h5 class="font-bold">Kenilworth Castle</h5><p class="text-xs opacity-70">20 min drive</p></div>
+                            <i class="fas fa-external-link-alt opacity-50"></i>
+                        </a>
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section class="bg-red-600 p-8 rounded-3xl text-white">
-                    <h3 class="text-xl font-bold mb-4 flex items-center"><i class="fas fa-exclamation-triangle mr-3"></i> Important Rules</h3>
-                    <ul class="space-y-4 text-sm font-medium">
-                        <li class="flex items-start"><i class="fas fa-check-circle mr-3 mt-1"></i> <span><strong>Hot Tub:</strong> Not in use. Please do not uncover or try to use.</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle mr-3 mt-1"></i> <span><strong>No Smoking:</strong> Strictly prohibited inside the house.</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle mr-3 mt-1"></i> <span><strong>Quiet Hours:</strong> Respect neighbors after 10 PM.</span></li>
-                    </ul>
-                </section>
-            </div>
+            <!-- SECTION: DINING -->
+            <section id="dining" class="scroll-mt-24 space-y-10">
+                <div>
+                    <h3 class="text-2xl font-black flex items-center"><i class="fas fa-utensils mr-4 text-orange-500"></i> Eat & Drink</h3>
+                    <p class="text-slate-500 mt-2">Tap any name to find it on Google Maps.</p>
+                </div>
 
-            <!-- DINING PAGE -->
-            <div id="page-dining" class="page-view space-y-10 hidden">
-                <section>
-                    <h2 class="text-3xl font-black mb-2">Eat & Drink</h2>
-                    <p class="text-slate-500">Highly recommended local spots.</p>
-                </section>
-
+                <!-- Breakfast -->
                 <div class="space-y-4">
                     <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest">Breakfast & Brunch</h4>
-                    <div class="grid grid-cols-2 gap-3">
-                        <div class="bg-white p-4 rounded-xl border text-sm font-bold">Steamhouse Depot</div>
-                        <div class="bg-white p-4 rounded-xl border text-sm font-bold">Fat Birds Café</div>
-                        <div class="bg-white p-4 rounded-xl border text-sm font-bold">Leif</div>
-                        <div class="bg-white p-4 rounded-xl border text-sm font-bold">WSK</div>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                        <a href="https://www.google.com/maps/search/Steamhouse+Depot+Leamington" target="_blank" class="card-hover bg-white p-4 rounded-xl border text-center text-sm font-bold">Steamhouse</a>
+                        <a href="https://www.google.com/maps/search/Fat+Birds+Cafe+Leamington" target="_blank" class="card-hover bg-white p-4 rounded-xl border text-center text-sm font-bold">Fat Birds</a>
+                        <a href="https://www.google.com/maps/search/Leif+Leamington" target="_blank" class="card-hover bg-white p-4 rounded-xl border text-center text-sm font-bold">Leif</a>
+                        <a href="https://www.google.com/maps/search/WSK+Leamington" target="_blank" class="card-hover bg-white p-4 rounded-xl border text-center text-sm font-bold">WSK</a>
                     </div>
                 </div>
 
+                <!-- International -->
                 <div class="space-y-4">
-                    <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest">Dinner Favourites</h4>
+                    <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest">International Cuisines</h4>
                     <div class="grid gap-3">
-                        <div class="bg-white p-5 rounded-2xl border">
-                            <p class="text-[10px] font-bold text-indigo-500 uppercase mb-2">Pizza & Italian</p>
-                            <p class="font-bold mb-1">Red Hot Mamma <span class="text-slate-400 font-normal ml-2">Best Pizza in town!</span></p>
-                            <p class="font-bold border-t pt-2 mt-2 text-sm">La Coppola / Villa Capri</p>
+                        <!-- Italian -->
+                        <div class="bg-white p-5 rounded-2xl border flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div class="flex-1">
+                                <p class="text-[10px] font-bold text-indigo-500 uppercase mb-1">Italian & Pizza</p>
+                                <div class="flex flex-wrap gap-2 text-sm font-bold">
+                                    <a href="https://www.google.com/maps/search/Red+Hot+Mamma+Leamington" target="_blank" class="text-orange-600 hover:underline">Red Hot Mamma</a>
+                                    <span class="text-slate-300">|</span>
+                                    <a href="https://www.google.com/maps/search/La+Coppola+Leamington" target="_blank" class="hover:underline">La Coppola</a>
+                                    <span class="text-slate-300">|</span>
+                                    <a href="https://www.google.com/maps/search/Villa+Capri+Leamington" target="_blank" class="hover:underline">Villa Capri</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bg-white p-5 rounded-2xl border">
-                            <p class="text-[10px] font-bold text-indigo-500 uppercase mb-2">Asian Cuisine</p>
-                            <p class="font-bold">Hayashi / Natsuya <span class="text-slate-400 font-normal ml-2">(Japanese)</span></p>
-                            <p class="font-bold border-t pt-2 mt-2">5 Rivers / Herb <span class="text-slate-400 font-normal ml-2">(Indian)</span></p>
+                        <!-- Greek/Turkish -->
+                        <div class="bg-white p-5 rounded-2xl border flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div class="flex-1">
+                                <p class="text-[10px] font-bold text-indigo-500 uppercase mb-1">Greek & Turkish</p>
+                                <div class="flex flex-wrap gap-2 text-sm font-bold">
+                                    <a href="https://www.google.com/maps/search/Meraki+Tavern+Leamington" target="_blank" class="hover:underline">Meraki Tavern</a>
+                                    <span class="text-slate-300">|</span>
+                                    <a href="https://www.google.com/maps/search/Beba+Greek+Leamington" target="_blank" class="hover:underline">Beba's</a>
+                                    <span class="text-slate-300">|</span>
+                                    <a href="https://www.google.com/maps/search/Otto+Turkish+Leamington" target="_blank" class="hover:underline">Otto</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bg-white p-5 rounded-2xl border">
-                            <p class="text-[10px] font-bold text-indigo-500 uppercase mb-2">British Pubs</p>
-                            <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm font-bold">
-                                <span>The Fox & Vivian</span>
-                                <span>The Star and Garter</span>
-                                <span>The Drawing Board</span>
+                        <!-- Asian -->
+                        <div class="bg-white p-5 rounded-2xl border flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div class="flex-1">
+                                <p class="text-[10px] font-bold text-indigo-500 uppercase mb-1">Asian Cuisine</p>
+                                <div class="flex flex-wrap gap-2 text-sm font-bold">
+                                    <a href="https://www.google.com/maps/search/Hayashi+Leamington" target="_blank" class="hover:underline">Hayashi</a>
+                                    <span class="text-slate-300">|</span>
+                                    <a href="https://www.google.com/maps/search/Natsuya+Leamington" target="_blank" class="hover:underline">Natsuya</a>
+                                    <span class="text-slate-300">|</span>
+                                    <a href="https://www.google.com/maps/search/Herb+Leamington" target="_blank" class="hover:underline text-green-600">Herb (Veg)</a>
+                                    <span class="text-slate-300">|</span>
+                                    <a href="https://www.google.com/maps/search/5+Rivers+Leamington" target="_blank" class="hover:underline">5 Rivers</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- European -->
+                        <div class="bg-white p-5 rounded-2xl border flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div class="flex-1">
+                                <p class="text-[10px] font-bold text-indigo-500 uppercase mb-1">European</p>
+                                <div class="flex flex-wrap gap-2 text-sm font-bold">
+                                    <a href="https://www.google.com/maps/search/Oscars+French+Leamington" target="_blank" class="hover:underline">Oscars</a>
+                                    <span class="text-slate-300">|</span>
+                                    <a href="https://www.google.com/maps/search/Baserri+Leamington" target="_blank" class="hover:underline">Baserri (Tapas)</a>
+                                    <span class="text-slate-300">|</span>
+                                    <a href="https://www.google.com/maps/search/Eleven+Leamington" target="_blank" class="hover:underline">Eleven</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-slate-900 rounded-3xl p-8 text-white text-center">
-                    <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-indigo-400">Evening Drinks & Music</h4>
-                    <div class="flex flex-wrap justify-center gap-2">
-                        <span class="px-3 py-1.5 bg-white/10 rounded-lg text-xs">The Terrace</span>
-                        <span class="px-3 py-1.5 bg-white/10 rounded-lg text-xs">Fizzy Moon</span>
-                        <span class="px-3 py-1.5 bg-white/10 rounded-lg text-xs">Bedford Street</span>
-                        <span class="px-3 py-1.5 bg-white/10 rounded-lg text-xs">The Royal Pug</span>
-                        <span class="px-3 py-1.5 bg-white/10 rounded-lg text-xs">Wildes</span>
+                <!-- Pubs -->
+                <div class="bg-slate-900 rounded-3xl p-8 text-white">
+                    <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-indigo-400 text-center">Pubs & Bars</h4>
+                    <div class="grid sm:grid-cols-2 gap-8 text-center">
+                        <div>
+                            <p class="text-[10px] font-bold mb-3 text-slate-400 uppercase">Traditional Pubs</p>
+                            <div class="flex flex-col gap-2 text-sm">
+                                <a href="https://www.google.com/maps/search/The+Fox+and+Vivian+Leamington" target="_blank" class="hover:text-indigo-300">The Fox & Vivian</a>
+                                <a href="https://www.google.com/maps/search/The+Star+and+Garter+Leamington" target="_blank" class="hover:text-indigo-300">The Star & Garter</a>
+                                <a href="https://www.google.com/maps/search/The+Drawing+Board+Leamington" target="_blank" class="hover:text-indigo-300">The Drawing Board</a>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-bold mb-3 text-slate-400 uppercase">Late Night & Music</p>
+                            <div class="flex flex-col gap-2 text-sm">
+                                <a href="https://www.google.com/maps/search/Fizzy+Moon+Leamington" target="_blank" class="hover:text-indigo-300">Fizzy Moon</a>
+                                <a href="https://www.google.com/maps/search/The+Terrace+Leamington" target="_blank" class="hover:text-indigo-300">The Terrace</a>
+                                <a href="https://www.google.com/maps/search/Bedford+Street+Leamington" target="_blank" class="hover:text-indigo-300">Bedford Street</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
         </main>
     </div>
@@ -216,21 +265,24 @@
             }
         }
 
-        function navigateTo(pageId) {
-            document.querySelectorAll('.page-view').forEach(p => p.classList.add('hidden'));
-            document.getElementById('page-' + pageId).classList.remove('hidden');
-            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active-link'));
-            document.getElementById('btn-' + pageId).classList.add('active-link');
-            window.scrollTo(0, 0);
-            if (window.innerWidth < 1024) toggleSidebar(false);
-            window.location.hash = pageId;
-        }
+        // Highlight active link on scroll
+        window.addEventListener('scroll', () => {
+            let current = "";
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-        window.onload = () => {
-            const hash = window.location.hash.replace('#', '');
-            if (['home', 'house', 'dining'].includes(hash)) navigateTo(hash);
-            else navigateTo('home');
-        };
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 </html>
