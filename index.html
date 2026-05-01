@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
         #sidebar { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         .nav-link.active { border-left: 4px solid #6366f1; background-color: #f5f3ff; color: #4f46e5; font-weight: 700; }
@@ -15,6 +15,7 @@
         .mobile-nav-link.active i { transform: translateY(-2px); color: #4f46e5; }
         .card-hover { transition: all 0.2s ease; }
         .card-hover:active { transform: scale(0.98); background-color: #f8fafc; }
+        .tag-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 9999px; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
@@ -116,11 +117,12 @@
                     <div class="bg-white p-6 rounded-2xl border shadow-sm space-y-3">
                         <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center"><i class="fas fa-tshirt"></i></div>
                         <h4 class="font-bold">Wardrobes</h4>
-                        <p class="text-sm text-slate-500 leading-relaxed"><strong>Front Bedroom:</strong> Use wardrobe inside. <br><strong>Back Bedroom:</strong> Use wardrobe on landing.</p>
+                        <p class="text-sm text-slate-500 leading-relaxed"><span class="block mb-1 font-semibold text-slate-700">Front Bedroom:</span> Wardrobe is inside the room. <br><span class="block mt-2 mb-1 font-semibold text-slate-700">Back Bedroom:</span> Wardrobe is on the landing.</p>
                     </div>
                     <div class="bg-red-50 border border-red-100 p-6 rounded-2xl space-y-3">
                         <div class="w-10 h-10 bg-red-100 text-red-600 rounded-full flex items-center justify-center"><i class="fas fa-hot-tub"></i></div>
-                        <h4 class="font-bold text-red-900">Hot Tub</h4>
+                        <h4 class="font-bold text-red-900 uppercase tracking-wide text-xs">Closed Area</h4>
+                        <h4 class="font-bold text-xl">Hot Tub</h4>
                         <p class="text-sm text-red-700 leading-relaxed">The hot tub is currently <strong>not in use</strong>. Please do not uncover or attempt to use.</p>
                     </div>
                 </div>
@@ -133,21 +135,31 @@
                 <div class="space-y-4">
                     <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest">Leamington Parks</h4>
                     <div class="grid sm:grid-cols-2 gap-4">
-                        <a href="https://www.google.com/maps/search/Villier+Street+Recreation+Ground+Leamington" target="_blank" class="card-hover bg-white p-5 rounded-2xl border flex items-center justify-between">
-                            <div><h5 class="font-bold">Villier St Rec</h5><p class="text-xs text-slate-500">3 min walk - Dogs & Kids play area</p></div>
-                            <i class="fas fa-external-link-alt text-slate-300"></i>
+                        <a href="https://www.google.com/maps/search/Villier+Street+Recreation+Ground+Leamington" target="_blank" class="card-hover bg-white p-6 rounded-2xl border flex flex-col justify-between">
+                            <div class="flex justify-between items-start mb-2">
+                                <h5 class="font-bold text-lg">Villier St Rec</h5>
+                                <span class="tag-label bg-green-50 text-green-600">3 min walk</span>
+                            </div>
+                            <p class="text-sm text-slate-500 mb-4">Dog friendly & children's play area</p>
+                            <span class="text-xs font-bold text-indigo-600 flex items-center">Maps <i class="fas fa-chevron-right ml-2 text-[10px]"></i></span>
                         </a>
-                        <a href="https://www.google.com/maps/search/Jephson+Gardens+Leamington" target="_blank" class="card-hover bg-white p-5 rounded-2xl border flex items-center justify-between">
-                            <div><h5 class="font-bold">Jephson Gardens</h5><p class="text-xs text-slate-500">Tea Room, Japanese Garden & Boats</p></div>
-                            <i class="fas fa-external-link-alt text-slate-300"></i>
+                        <a href="https://www.google.com/maps/search/Jephson+Gardens+Leamington" target="_blank" class="card-hover bg-white p-6 rounded-2xl border flex flex-col justify-between">
+                            <div class="flex justify-between items-start mb-2">
+                                <h5 class="font-bold text-lg">Jephson Gardens</h5>
+                                <span class="tag-label bg-indigo-50 text-indigo-600">Highly Rated</span>
+                            </div>
+                            <p class="text-sm text-slate-500 mb-4">Tea Room, Japanese Garden & boat hire</p>
+                            <span class="text-xs font-bold text-indigo-600 flex items-center">Maps <i class="fas fa-chevron-right ml-2 text-[10px]"></i></span>
                         </a>
-                        <a href="https://www.google.com/maps/search/Victoria+Park+Leamington" target="_blank" class="card-hover bg-white p-5 rounded-2xl border flex items-center justify-between">
-                            <div><h5 class="font-bold">Victoria Park</h5><p class="text-xs text-slate-500">Beautiful riverside park</p></div>
-                            <i class="fas fa-external-link-alt text-slate-300"></i>
+                        <a href="https://www.google.com/maps/search/Victoria+Park+Leamington" target="_blank" class="card-hover bg-white p-6 rounded-2xl border flex flex-col justify-between">
+                            <h5 class="font-bold text-lg mb-2">Victoria Park</h5>
+                            <p class="text-sm text-slate-500 mb-4">Beautiful riverside park and leisure area</p>
+                            <span class="text-xs font-bold text-indigo-600 flex items-center">Maps <i class="fas fa-chevron-right ml-2 text-[10px]"></i></span>
                         </a>
-                        <a href="https://www.google.com/maps/search/Newbold+Comyn+Leamington" target="_blank" class="card-hover bg-white p-5 rounded-2xl border flex items-center justify-between">
-                            <div><h5 class="font-bold">Newbold Comyn</h5><p class="text-xs text-slate-500">Large open space for long walks</p></div>
-                            <i class="fas fa-external-link-alt text-slate-300"></i>
+                        <a href="https://www.google.com/maps/search/Newbold+Comyn+Leamington" target="_blank" class="card-hover bg-white p-6 rounded-2xl border flex flex-col justify-between">
+                            <h5 class="font-bold text-lg mb-2">Newbold Comyn</h5>
+                            <p class="text-sm text-slate-500 mb-4">Large open space for long nature walks</p>
+                            <span class="text-xs font-bold text-indigo-600 flex items-center">Maps <i class="fas fa-chevron-right ml-2 text-[10px]"></i></span>
                         </a>
                     </div>
                 </div>
@@ -155,13 +167,19 @@
                 <div class="space-y-4 pt-4">
                     <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest">Nearby Landmarks</h4>
                     <div class="grid sm:grid-cols-2 gap-4">
-                        <a href="https://www.google.com/maps/search/Warwick+Castle" target="_blank" class="card-hover bg-indigo-900 p-6 rounded-2xl text-white flex items-center justify-between">
-                            <div><h5 class="font-bold">Warwick Castle</h5><p class="text-xs opacity-70">Famous historic fortress (10m drive)</p></div>
-                            <i class="fas fa-external-link-alt opacity-50"></i>
+                        <a href="https://www.google.com/maps/search/Warwick+Castle" target="_blank" class="card-hover bg-indigo-900 p-6 rounded-2xl text-white flex flex-col justify-between min-h-[140px]">
+                            <div class="flex justify-between items-start">
+                                <h5 class="font-bold text-xl">Warwick Castle</h5>
+                                <span class="tag-label bg-white/20 text-white">10m drive</span>
+                            </div>
+                            <p class="text-sm opacity-80 mt-2">World-famous historic fortress</p>
                         </a>
-                        <a href="https://www.google.com/maps/search/Kenilworth+Castle" target="_blank" class="card-hover bg-slate-800 p-6 rounded-2xl text-white flex items-center justify-between">
-                            <div><h5 class="font-bold">Kenilworth Castle</h5><p class="text-xs opacity-70">Stunning ruins (20m drive)</p></div>
-                            <i class="fas fa-external-link-alt opacity-50"></i>
+                        <a href="https://www.google.com/maps/search/Kenilworth+Castle" target="_blank" class="card-hover bg-slate-800 p-6 rounded-2xl text-white flex flex-col justify-between min-h-[140px]">
+                            <div class="flex justify-between items-start">
+                                <h5 class="font-bold text-xl">Kenilworth Castle</h5>
+                                <span class="tag-label bg-white/20 text-white">20m drive</span>
+                            </div>
+                            <p class="text-sm opacity-80 mt-2">Stunning historic ruins</p>
                         </a>
                     </div>
                 </div>
@@ -171,94 +189,154 @@
             <section id="dining" class="scroll-mt-24 space-y-10">
                 <div>
                     <h3 class="text-2xl font-black flex items-center"><i class="fas fa-utensils mr-4 text-orange-500"></i> Eat & Drink</h3>
-                    <p class="text-slate-500 mt-2">Tap any name to get instant directions.</p>
+                    <p class="text-slate-500 mt-2">Personal recommendations for local favorites.</p>
                 </div>
 
                 <!-- Breakfast -->
                 <div class="space-y-4">
                     <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest">Breakfast & Brunch</h4>
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                        <a href="https://www.google.com/maps/search/Steamhouse+Depot+Leamington" target="_blank" class="card-hover bg-white p-4 rounded-xl border text-center text-sm font-bold">Steamhouse (Bagels)</a>
-                        <a href="https://www.google.com/maps/search/Fat+Birds+Cafe+Leamington" target="_blank" class="card-hover bg-white p-4 rounded-xl border text-center text-sm font-bold">Fat Birds</a>
-                        <a href="https://www.google.com/maps/search/Leif+Leamington" target="_blank" class="card-hover bg-white p-4 rounded-xl border text-center text-sm font-bold">Leif</a>
-                        <a href="https://www.google.com/maps/search/WSK+Leamington" target="_blank" class="card-hover bg-white p-4 rounded-xl border text-center text-sm font-bold">WSK</a>
+                        <a href="https://www.google.com/maps/search/Steamhouse+Depot+Leamington" target="_blank" class="card-hover bg-white p-4 rounded-xl border flex flex-col text-center">
+                            <span class="font-bold text-sm">Steamhouse</span>
+                            <span class="text-[9px] text-slate-400 font-bold uppercase mt-1">Best Bagels</span>
+                        </a>
+                        <a href="https://www.google.com/maps/search/Fat+Birds+Cafe+Leamington" target="_blank" class="card-hover bg-white p-4 rounded-xl border flex flex-col text-center">
+                            <span class="font-bold text-sm">Fat Birds</span>
+                            <span class="text-[9px] text-slate-400 font-bold uppercase mt-1">Local Café</span>
+                        </a>
+                        <a href="https://www.google.com/maps/search/Leif+Leamington" target="_blank" class="card-hover bg-white p-4 rounded-xl border flex flex-col text-center">
+                            <span class="font-bold text-sm">Leif</span>
+                            <span class="text-[9px] text-slate-400 font-bold uppercase mt-1">Tea Room</span>
+                        </a>
+                        <a href="https://www.google.com/maps/search/WSK+Leamington" target="_blank" class="card-hover bg-white p-4 rounded-xl border flex flex-col text-center">
+                            <span class="font-bold text-sm">WSK</span>
+                            <span class="text-[9px] text-slate-400 font-bold uppercase mt-1">Modern Brunch</span>
+                        </a>
                     </div>
                 </div>
 
                 <!-- International -->
-                <div class="space-y-4">
-                    <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest">International Cuisines</h4>
-                    <div class="grid gap-3">
+                <div class="space-y-6">
+                    <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest">Top Dining Spots</h4>
+                    <div class="grid sm:grid-cols-2 gap-4">
                         <!-- Italian -->
-                        <div class="bg-white p-5 rounded-2xl border">
-                            <p class="text-[10px] font-bold text-indigo-500 uppercase mb-2">Italian & Pizza</p>
-                            <div class="flex flex-wrap gap-y-2 gap-x-4 text-sm font-bold">
-                                <a href="https://www.google.com/maps/search/Red+Hot+Mamma+Leamington" target="_blank" class="text-orange-600 hover:underline">Red Hot Mamma (Excellent Pizza)</a>
-                                <a href="https://www.google.com/maps/search/La+Coppola+Leamington" target="_blank" class="hover:underline">La Coppola (Fine Dining)</a>
-                                <a href="https://www.google.com/maps/search/Villa+Capri+Leamington" target="_blank" class="hover:underline">Villa Capri</a>
+                        <div class="bg-white p-6 rounded-2xl border shadow-sm flex flex-col">
+                            <h5 class="font-extrabold text-slate-900 border-b pb-3 mb-4 flex items-center">
+                                <i class="fas fa-pizza-slice text-orange-500 mr-2"></i> Italian
+                            </h5>
+                            <div class="space-y-4">
+                                <a href="https://www.google.com/maps/search/Red+Hot+Mamma+Leamington" target="_blank" class="group block">
+                                    <div class="flex justify-between">
+                                        <span class="font-bold text-slate-700 group-hover:text-indigo-600 transition-colors">Red Hot Mamma</span>
+                                        <span class="tag-label bg-orange-50 text-orange-600">Great Pizza</span>
+                                    </div>
+                                </a>
+                                <a href="https://www.google.com/maps/search/La+Coppola+Leamington" target="_blank" class="group block">
+                                    <div class="flex justify-between">
+                                        <span class="font-bold text-slate-700 group-hover:text-indigo-600 transition-colors">La Coppola</span>
+                                        <span class="tag-label bg-slate-100 text-slate-500">Fine Dining</span>
+                                    </div>
+                                </a>
+                                <a href="https://www.google.com/maps/search/Villa+Capri+Leamington" target="_blank" class="group block">
+                                    <span class="font-bold text-slate-700 group-hover:text-indigo-600 transition-colors">Villa Capri</span>
+                                </a>
                             </div>
                         </div>
-                        <!-- Greek/Turkish -->
-                        <div class="bg-white p-5 rounded-2xl border">
-                            <p class="text-[10px] font-bold text-indigo-500 uppercase mb-2">Greek & Turkish</p>
-                            <div class="flex flex-wrap gap-y-2 gap-x-4 text-sm font-bold">
-                                <a href="https://www.google.com/maps/search/Meraki+Tavern+Leamington" target="_blank" class="hover:underline">Meraki Tavern</a>
-                                <a href="https://www.google.com/maps/search/Beba+Greek+Leamington" target="_blank" class="hover:underline">Beba's Greek</a>
-                                <a href="https://www.google.com/maps/search/Otto+Turkish+Leamington" target="_blank" class="hover:underline">Otto</a>
-                            </div>
-                        </div>
+
                         <!-- Asian -->
-                        <div class="bg-white p-5 rounded-2xl border">
-                            <p class="text-[10px] font-bold text-indigo-500 uppercase mb-2">Asian Cuisine</p>
-                            <div class="space-y-2">
-                                <div class="flex flex-wrap gap-y-2 gap-x-4 text-sm font-bold">
-                                    <a href="https://www.google.com/maps/search/Hayashi+Leamington" target="_blank" class="hover:underline">Hayashi</a>
-                                    <a href="https://www.google.com/maps/search/Natsuya+Leamington" target="_blank" class="hover:underline">Natsuya</a>
-                                    <a href="https://www.google.com/maps/search/Nanas+Leamington" target="_blank" class="hover:underline">Nana's</a>
-                                    <a href="https://www.google.com/maps/search/The+Emperors+Leamington" target="_blank" class="hover:underline">The Emperors (Chinese)</a>
-                                </div>
-                                <div class="flex flex-wrap gap-y-2 gap-x-4 text-sm font-bold border-t pt-2 mt-2">
-                                    <a href="https://www.google.com/maps/search/Herb+Leamington" target="_blank" class="hover:underline text-green-600">Herb (South Indian Vegetarian)</a>
-                                    <a href="https://www.google.com/maps/search/5+Rivers+Leamington" target="_blank" class="hover:underline">5 Rivers (Indian)</a>
-                                    <a href="https://www.google.com/maps/search/Kayal+Leamington" target="_blank" class="hover:underline">Kayal (South Indian)</a>
-                                </div>
+                        <div class="bg-white p-6 rounded-2xl border shadow-sm flex flex-col">
+                            <h5 class="font-extrabold text-slate-900 border-b pb-3 mb-4 flex items-center">
+                                <i class="fas fa-seedling text-green-500 mr-2"></i> Asian & Indian
+                            </h5>
+                            <div class="space-y-4">
+                                <a href="https://www.google.com/maps/search/Herb+Leamington" target="_blank" class="group block">
+                                    <div class="flex justify-between">
+                                        <span class="font-bold text-slate-700 group-hover:text-indigo-600 transition-colors">Herb</span>
+                                        <span class="tag-label bg-green-50 text-green-600">S. Indian Veg</span>
+                                    </div>
+                                </a>
+                                <a href="https://www.google.com/maps/search/Hayashi+Leamington" target="_blank" class="group block">
+                                    <span class="font-bold text-slate-700 group-hover:text-indigo-600 transition-colors">Hayashi (Sushi)</span>
+                                </a>
+                                <a href="https://www.google.com/maps/search/5+Rivers+Leamington" target="_blank" class="group block">
+                                    <span class="font-bold text-slate-700 group-hover:text-indigo-600 transition-colors">5 Rivers (Indian)</span>
+                                </a>
                             </div>
                         </div>
-                        <!-- European -->
-                        <div class="bg-white p-5 rounded-2xl border">
-                            <p class="text-[10px] font-bold text-indigo-500 uppercase mb-2">European</p>
-                            <div class="flex flex-wrap gap-y-2 gap-x-4 text-sm font-bold">
-                                <a href="https://www.google.com/maps/search/Oscars+French+Leamington" target="_blank" class="hover:underline">Oscars (French)</a>
-                                <a href="https://www.google.com/maps/search/Baserri+Leamington" target="_blank" class="hover:underline">Baserri (Fine Dining Tapas)</a>
-                                <a href="https://www.google.com/maps/search/Carisma+Tapas+Leamington" target="_blank" class="hover:underline">Carisma (Casual Tapas)</a>
-                                <a href="https://www.google.com/maps/search/Eleven+Leamington" target="_blank" class="hover:underline">Eleven (French)</a>
+
+                        <!-- European / Tapas -->
+                        <div class="bg-white p-6 rounded-2xl border shadow-sm flex flex-col">
+                            <h5 class="font-extrabold text-slate-900 border-b pb-3 mb-4 flex items-center">
+                                <i class="fas fa-wine-glass-alt text-red-500 mr-2"></i> European & Tapas
+                            </h5>
+                            <div class="space-y-4">
+                                <a href="https://www.google.com/maps/search/Baserri+Leamington" target="_blank" class="group block">
+                                    <div class="flex justify-between">
+                                        <span class="font-bold text-slate-700 group-hover:text-indigo-600 transition-colors">Baserri</span>
+                                        <span class="tag-label bg-slate-100 text-slate-500">Fine Tapas</span>
+                                    </div>
+                                </a>
+                                <a href="https://www.google.com/maps/search/Oscars+French+Leamington" target="_blank" class="group block">
+                                    <span class="font-bold text-slate-700 group-hover:text-indigo-600 transition-colors">Oscars (French)</span>
+                                </a>
+                                <a href="https://www.google.com/maps/search/Carisma+Tapas+Leamington" target="_blank" class="group block">
+                                    <span class="font-bold text-slate-700 group-hover:text-indigo-600 transition-colors">Carisma (Casual)</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Greek & Turkish -->
+                        <div class="bg-white p-6 rounded-2xl border shadow-sm flex flex-col">
+                            <h5 class="font-extrabold text-slate-900 border-b pb-3 mb-4 flex items-center">
+                                <i class="fas fa-pepper-hot text-blue-500 mr-2"></i> Mediterranean
+                            </h5>
+                            <div class="space-y-4">
+                                <a href="https://www.google.com/maps/search/Meraki+Tavern+Leamington" target="_blank" class="group block">
+                                    <span class="font-bold text-slate-700 group-hover:text-indigo-600 transition-colors">Meraki Tavern</span>
+                                </a>
+                                <a href="https://www.google.com/maps/search/Beba+Greek+Leamington" target="_blank" class="group block">
+                                    <span class="font-bold text-slate-700 group-hover:text-indigo-600 transition-colors">Beba's Greek</span>
+                                </a>
+                                <a href="https://www.google.com/maps/search/Otto+Turkish+Leamington" target="_blank" class="group block">
+                                    <span class="font-bold text-slate-700 group-hover:text-indigo-600 transition-colors">Otto (Turkish)</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Pubs -->
-                <div class="bg-slate-900 rounded-3xl p-8 text-white">
-                    <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-indigo-400 text-center">Pubs & Bars</h4>
-                    <div class="grid sm:grid-cols-2 gap-8 text-center">
-                        <div>
-                            <p class="text-[10px] font-bold mb-3 text-slate-400 uppercase">Traditional Pubs</p>
-                            <div class="flex flex-col gap-2 text-sm font-bold">
-                                <a href="https://www.google.com/maps/search/The+Fox+and+Vivian+Leamington" target="_blank" class="hover:text-indigo-300">The Fox & Vivian (Great Roast)</a>
-                                <a href="https://www.google.com/maps/search/The+Star+and+Garter+Leamington" target="_blank" class="hover:text-indigo-300">The Star & Garter</a>
-                                <a href="https://www.google.com/maps/search/The+Drawing+Board+Leamington" target="_blank" class="hover:text-indigo-300">The Drawing Board</a>
-                                <a href="https://www.google.com/maps/search/Grace+and+Vine+Leamington" target="_blank" class="hover:text-indigo-300 text-xs opacity-70">Grace & Vine (Nibbles)</a>
+                <!-- Pubs & Bars (Split into individual cards) -->
+                <div class="space-y-6 pt-6">
+                    <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest">Pubs & Late Night</h4>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <a href="https://www.google.com/maps/search/The+Fox+and+Vivian+Leamington" target="_blank" class="card-hover bg-slate-900 p-6 rounded-2xl text-white flex flex-col justify-between">
+                            <div class="flex justify-between items-start">
+                                <h5 class="font-bold text-lg">The Fox & Vivian</h5>
+                                <span class="tag-label bg-indigo-500 text-white">Best Roast</span>
                             </div>
-                        </div>
-                        <div>
-                            <p class="text-[10px] font-bold mb-3 text-slate-400 uppercase">Evening / Music</p>
-                            <div class="flex flex-col gap-2 text-sm font-bold">
-                                <a href="https://www.google.com/maps/search/Fizzy+Moon+Leamington" target="_blank" class="hover:text-indigo-300">Fizzy Moon</a>
-                                <a href="https://www.google.com/maps/search/The+Terrace+Leamington" target="_blank" class="hover:text-indigo-300">The Terrace</a>
-                                <a href="https://www.google.com/maps/search/Bedford+Street+Leamington" target="_blank" class="hover:text-indigo-300">Bedford Street</a>
-                                <a href="https://www.google.com/maps/search/The+Royal+Pug+Leamington" target="_blank" class="hover:text-indigo-300">The Royal Pug</a>
+                            <p class="text-sm opacity-70 mt-4 italic">Cosy atmosphere, high quality traditional pub food.</p>
+                        </a>
+                        <a href="https://www.google.com/maps/search/The+Drawing+Board+Leamington" target="_blank" class="card-hover bg-slate-900 p-6 rounded-2xl text-white flex flex-col justify-between">
+                            <div class="flex justify-between items-start">
+                                <h5 class="font-bold text-lg">The Drawing Board</h5>
+                                <span class="tag-label bg-white/20 text-white">Eclectic</span>
                             </div>
-                        </div>
+                            <p class="text-sm opacity-70 mt-4 italic">Great craft beers and creative menu options.</p>
+                        </a>
+                        <a href="https://www.google.com/maps/search/Fizzy+Moon+Leamington" target="_blank" class="card-hover bg-indigo-900 p-6 rounded-2xl text-white flex flex-col justify-between">
+                            <div class="flex justify-between items-start">
+                                <h5 class="font-bold text-lg">Fizzy Moon</h5>
+                                <span class="tag-label bg-indigo-400 text-white">Gin & Music</span>
+                            </div>
+                            <p class="text-sm opacity-70 mt-4 italic">Excellent gin selection and live weekend DJs.</p>
+                        </a>
+                        <a href="https://www.google.com/maps/search/Bedford+Street+Leamington" target="_blank" class="card-hover bg-indigo-900 p-6 rounded-2xl text-white flex flex-col justify-between">
+                            <div class="flex justify-between items-start">
+                                <h5 class="font-bold text-lg">Bedford Street</h5>
+                                <span class="tag-label bg-indigo-400 text-white">Late Night</span>
+                            </div>
+                            <p class="text-sm opacity-70 mt-4 italic">The place to go for live bands and late drinks.</p>
+                        </a>
                     </div>
                 </div>
             </section>
