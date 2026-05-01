@@ -11,6 +11,8 @@
         body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
         #sidebar { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         .nav-link.active { border-left: 4px solid #6366f1; background-color: #f5f3ff; color: #4f46e5; font-weight: 700; }
+        .mobile-nav-link.active { color: #4f46e5; }
+        .mobile-nav-link.active i { transform: translateY(-2px); color: #4f46e5; }
         .card-hover { transition: all 0.2s ease; }
         .card-hover:active { transform: scale(0.98); background-color: #f8fafc; }
     </style>
@@ -24,14 +26,36 @@
             <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Guest Concierge</p>
         </div>
         <button onclick="toggleSidebar(true)" class="w-10 h-10 flex items-center justify-center text-xl text-slate-600 bg-slate-50 rounded-full">
-            <i class="fas fa-bars"></i>
+            <i class="fas fa-info-circle"></i>
         </button>
     </header>
+
+    <!-- Mobile Bottom Tab Bar (Airbnb Style) -->
+    <nav class="lg:hidden fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-xl border-t border-slate-200 z-[100] pb-safe">
+        <div class="flex justify-around items-center h-16">
+            <a href="#welcome" class="mobile-nav-link flex flex-col items-center justify-center flex-1 text-slate-400 transition-all">
+                <i class="fas fa-door-open text-lg"></i>
+                <span class="text-[10px] font-medium mt-1">Welcome</span>
+            </a>
+            <a href="#house" class="mobile-nav-link flex flex-col items-center justify-center flex-1 text-slate-400 transition-all">
+                <i class="fas fa-home text-lg"></i>
+                <span class="text-[10px] font-medium mt-1">House</span>
+            </a>
+            <a href="#parks" class="mobile-nav-link flex flex-col items-center justify-center flex-1 text-slate-400 transition-all">
+                <i class="fas fa-tree text-lg"></i>
+                <span class="text-[10px] font-medium mt-1">Explore</span>
+            </a>
+            <a href="#dining" class="mobile-nav-link flex flex-col items-center justify-center flex-1 text-slate-400 transition-all">
+                <i class="fas fa-utensils text-lg"></i>
+                <span class="text-[10px] font-medium mt-1">Dining</span>
+            </a>
+        </div>
+    </nav>
 
     <div id="overlay" onclick="toggleSidebar(false)" class="fixed inset-0 bg-slate-900/60 z-[70] hidden backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
 
     <div class="flex min-h-screen">
-        <!-- Sidebar Navigation -->
+        <!-- Desktop Sidebar Navigation -->
         <nav id="sidebar" class="fixed inset-y-0 left-0 w-72 bg-white border-r z-[80] lg:sticky lg:top-0 lg:translate-x-0 -translate-x-full flex flex-col h-screen">
             <div class="p-8">
                 <h1 class="font-bold text-2xl text-indigo-600 leading-tight">Guest Guide</h1>
@@ -62,7 +86,7 @@
             </div>
         </nav>
 
-        <!-- Main Content (All One Page) -->
+        <!-- Main Content -->
         <main class="flex-1 w-full max-w-4xl mx-auto px-4 py-8 lg:py-16 space-y-20 pb-32">
             
             <!-- SECTION: WELCOME -->
@@ -269,7 +293,16 @@
                 }
             });
 
+            // Handle Desktop Links
             document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Handle Mobile Links
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href').includes(current)) {
                     link.classList.add('active');
