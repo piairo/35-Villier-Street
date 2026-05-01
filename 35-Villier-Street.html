@@ -1,208 +1,236 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2639
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
-{\colortbl;\red255\green255\blue255;\red109\green109\blue109;\red236\green241\blue247;\red251\green0\blue7;
-\red0\green0\blue0;\red42\green42\blue42;\red107\green0\blue1;\red0\green0\blue255;\red111\green14\blue195;
-\red9\green60\blue148;\red24\green112\blue43;\red19\green118\blue70;\red77\green80\blue85;\red164\green69\blue11;
-}
-{\*\expandedcolortbl;;\cssrgb\c50196\c50196\c50196;\cssrgb\c94118\c95686\c97647;\cssrgb\c100000\c0\c0;
-\cssrgb\c0\c0\c0;\cssrgb\c21961\c21961\c21961;\cssrgb\c50196\c0\c0;\cssrgb\c0\c0\c100000;\cssrgb\c51765\c18824\c80784;
-\cssrgb\c1569\c31765\c64706;\cssrgb\c9412\c50196\c21961;\cssrgb\c3529\c52549\c34510;\cssrgb\c37255\c38824\c40784;\cssrgb\c70980\c34902\c3137;
-}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>35 Villier Street Guest Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
+        #sidebar { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .active-link { border-left: 4px solid #6366f1; background-color: #f5f3ff; color: #4f46e5; font-weight: 700; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
 
-\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 <!DOCTYPE\cf4 \strokec4  html\cf2 \strokec2 >\cf0 \cb1 \strokec5 \
-\pard\pardeftab720\partightenfactor0
-\cf6 \cb3 \strokec6 <\cf7 \strokec7 html\cf0 \strokec5  \cf4 \strokec4 lang\cf6 \strokec6 =\cf8 \strokec8 "en"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "scroll-smooth"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cf6 \cb3 \strokec6 <\cf7 \strokec7 head\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\pard\pardeftab720\partightenfactor0
-\cf0 \cb3     \cf6 \strokec6 <\cf7 \strokec7 meta\cf0 \strokec5  \cf4 \strokec4 charset\cf6 \strokec6 =\cf8 \strokec8 "UTF-8"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 meta\cf0 \strokec5  \cf4 \strokec4 name\cf6 \strokec6 =\cf8 \strokec8 "viewport"\cf0 \strokec5  \cf4 \strokec4 content\cf6 \strokec6 =\cf8 \strokec8 "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 title\cf6 \strokec6 >\cf0 \strokec5 35 Villier Street Guest Guide\cf6 \strokec6 </\cf7 \strokec7 title\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 script\cf0 \strokec5  \cf4 \strokec4 src\cf6 \strokec6 =\cf8 \strokec8 "https://cdn.tailwindcss.com"\cf6 \strokec6 ></\cf7 \strokec7 script\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 link\cf0 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf8 \strokec8 "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"\cf0 \strokec5  \cf4 \strokec4 rel\cf6 \strokec6 =\cf8 \strokec8 "stylesheet"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 style\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3         \cf9 \strokec9 @import\cf0 \strokec5  \cf10 \strokec10 url\cf0 \strokec5 (\cf11 \strokec11 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap'\cf0 \strokec5 );\cb1 \
-\cb3         \cb1 \
-\cb3         \cf7 \strokec7 body\cf0 \strokec5  \{ \cf4 \strokec4 font-family:\cf0 \strokec5  \cf11 \strokec11 'Inter'\cf0 \strokec5 , \cf10 \strokec10 sans-serif\cf0 \strokec5 ; \cf4 \strokec4 -webkit-tap-highlight-color:\cf0 \strokec5  \cf10 \strokec10 transparent\cf0 \strokec5 ; \}\cb1 \
-\cb3         \cf7 \strokec7 #sidebar\cf0 \strokec5  \{ \cf4 \strokec4 transition:\cf0 \strokec5  \cf10 \strokec10 transform\cf0 \strokec5  \cf12 \strokec12 0.3s\cf0 \strokec5  \cf10 \strokec10 cubic-bezier(\cf12 \strokec12 0.4\cf0 \strokec5 , \cf12 \strokec12 0\cf0 \strokec5 , \cf12 \strokec12 0.2\cf0 \strokec5 , \cf12 \strokec12 1\cf10 \strokec10 )\cf0 \strokec5 ; \}\cb1 \
-\cb3         \cf7 \strokec7 .active-link\cf0 \strokec5  \{ \cf4 \strokec4 border-left:\cf0 \strokec5  \cf12 \strokec12 4px\cf0 \strokec5  \cf10 \strokec10 solid\cf0 \strokec5  \cf10 \strokec10 #6366f1\cf0 \strokec5 ; \cf4 \strokec4 background-color:\cf0 \strokec5  \cf10 \strokec10 #f5f3ff\cf0 \strokec5 ; \cf4 \strokec4 color:\cf0 \strokec5  \cf10 \strokec10 #4f46e5\cf0 \strokec5 ; \cf4 \strokec4 font-weight:\cf0 \strokec5  \cf12 \strokec12 600\cf0 \strokec5 ; \}\cb1 \
-\cb3         \cf7 \strokec7 .map-card\cf0 \strokec5  \{ \cf4 \strokec4 transition:\cf0 \strokec5  \cf10 \strokec10 transform\cf0 \strokec5  \cf12 \strokec12 0.2s\cf0 \strokec5 ; \}\cb1 \
-\cb3         \cf7 \strokec7 .map-card:active\cf0 \strokec5  \{ \cf4 \strokec4 transform:\cf0 \strokec5  \cf10 \strokec10 scale(\cf12 \strokec12 0.97\cf10 \strokec10 )\cf0 \strokec5 ; \}\cb1 \
-\cb3         \cf7 \strokec7 .hidden\cf0 \strokec5  \{ \cf4 \strokec4 display:\cf0 \strokec5  \cf10 \strokec10 none\cf0 \strokec5 ; \}\cb1 \
-\cb3     \cf6 \strokec6 </\cf7 \strokec7 style\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\pard\pardeftab720\partightenfactor0
-\cf6 \cb3 \strokec6 </\cf7 \strokec7 head\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cf6 \cb3 \strokec6 <\cf7 \strokec7 body\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-slate-50 text-slate-800"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\
-\pard\pardeftab720\partightenfactor0
-\cf0 \cb3     \cf13 \strokec13 <!-- Mobile Header -->\cf0 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 header\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "lg:hidden sticky top-0 z-[60] px-6 py-4 bg-white/90 backdrop-blur-md border-b flex justify-between items-center shadow-sm"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 <\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 h1\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold text-lg text-indigo-600"\cf6 \strokec6 >\cf0 \strokec5 35 Villier St\cf6 \strokec6 </\cf7 \strokec7 h1\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-[10px] text-slate-400 uppercase tracking-widest font-bold"\cf6 \strokec6 >\cf0 \strokec5 Guest Guide\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 <\cf7 \strokec7 button\cf0 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf8 \strokec8 "toggleSidebar(true)"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-12 h-12 flex items-center justify-center text-2xl text-slate-600 bg-slate-50 rounded-full"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 i\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fas fa-bars"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 </\cf7 \strokec7 button\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 </\cf7 \strokec7 header\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\
-\cb3     \cf13 \strokec13 <!-- Mobile Overlay -->\cf0 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "overlay"\cf0 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf8 \strokec8 "toggleSidebar(false)"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fixed inset-0 bg-slate-900/60 z-[70] hidden backdrop-blur-sm opacity-0 transition-opacity duration-300"\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex min-h-screen"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3         \cf13 \strokec13 <!-- Sidebar Navigation -->\cf0 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 <\cf7 \strokec7 nav\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "sidebar"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fixed inset-y-0 left-0 w-72 bg-white border-r z-[80] shadow-2xl lg:shadow-none lg:relative lg:translate-x-0 -translate-x-full flex flex-col h-screen"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "p-8"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 h1\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold text-2xl text-indigo-600 leading-tight"\cf6 \strokec6 >\cf0 \strokec5 Guest Book\cf6 \strokec6 </\cf7 \strokec7 h1\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm text-slate-400"\cf6 \strokec6 >\cf0 \strokec5 35 Villier Street\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3             \cb1 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex-1 px-4 space-y-1 overflow-y-auto"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                 \cf13 \strokec13 <!-- Page Navigation Links -->\cf0 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 button\cf0 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf8 \strokec8 "navigateTo('home')"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "nav-btn w-full flex items-center px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-600 transition-all"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 i\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fas fa-home w-8 text-indigo-500"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf0 \strokec5  Local Guide\cb1 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 button\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 button\cf0 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf8 \strokec8 "navigateTo('rules')"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "nav-btn w-full flex items-center px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-600 transition-all"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 i\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fas fa-shield-alt w-8 text-indigo-500"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf0 \strokec5  House Rules\cb1 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 a\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "p-6 border-t"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 button\cf0 \strokec5  \cf4 \strokec4 onclick\cf6 \strokec6 =\cf8 \strokec8 "window.print()"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-full bg-slate-900 text-white py-3 rounded-xl font-bold text-sm"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 i\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fas fa-print mr-2"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf0 \strokec5  Print Guide\cb1 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 button\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 </\cf7 \strokec7 nav\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\
-\cb3         \cf13 \strokec13 <!-- Page Containers -->\cf0 \cb1 \strokec5 \
-\cb3         \cf6 \strokec6 <\cf7 \strokec7 main\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex-1 w-full max-w-4xl mx-auto px-4 sm:px-8 lg:px-12 py-8 lg:py-16 pb-24"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3             \cb1 \
-\cb3             \cf13 \strokec13 <!-- HOME PAGE VIEW -->\cf0 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "page-home"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "page-view space-y-12"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 section\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-center py-10 bg-white rounded-3xl border border-slate-100 shadow-sm px-6"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 h2\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-3xl lg:text-5xl font-black mb-4 tracking-tight text-slate-900"\cf6 \strokec6 >\cf0 \strokec5 Welcome Home!\cf6 \strokec6 </\cf7 \strokec7 h2\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-slate-500"\cf6 \strokec6 >\cf0 \strokec5 The best spots in Royal Leamington Spa, all within your reach.\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 section\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 section\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "essentials"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 h3\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xl font-bold mb-6 flex items-center"\cf6 \strokec6 ><\cf7 \strokec7 i\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fas fa-info-circle mr-3 text-indigo-500"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf0 \strokec5  Essentials\cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "grid sm:grid-cols-2 gap-4"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-white p-6 rounded-2xl border shadow-sm"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 h4\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold mb-2"\cf6 \strokec6 >\cf0 \strokec5 Wardrobes\cf6 \strokec6 </\cf7 \strokec7 h4\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm text-slate-500"\cf6 \strokec6 >\cf0 \strokec5 Front room has its own; back room uses the landing wardrobe.\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-white p-6 rounded-2xl border shadow-sm"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 h4\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold mb-2"\cf6 \strokec6 >\cf0 \strokec5 Parking\cf6 \strokec6 </\cf7 \strokec7 h4\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm text-slate-500"\cf6 \strokec6 >\cf0 \strokec5 Free on this street! Check signs if you move closer to town.\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 section\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 section\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "dining"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 h3\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xl font-bold mb-6 flex items-center"\cf6 \strokec6 ><\cf7 \strokec7 i\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fas fa-utensils mr-3 text-orange-500"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf0 \strokec5  Top Recommendations\cf6 \strokec6 </\cf7 \strokec7 h3\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "grid gap-3"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 a\cf0 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf8 \strokec8 "https://www.google.com/maps/search/Meraki+Tavern+Leamington+Spa"\cf0 \strokec5  \cf4 \strokec4 target\cf6 \strokec6 =\cf8 \strokec8 "_blank"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "map-card bg-white p-5 rounded-2xl border flex justify-between items-center shadow-sm"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 div\cf6 \strokec6 ><\cf7 \strokec7 h4\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold"\cf6 \strokec6 >\cf0 \strokec5 Meraki Tavern\cf6 \strokec6 </\cf7 \strokec7 h4\cf6 \strokec6 ><\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-indigo-500"\cf6 \strokec6 >\cf0 \strokec5 Greek Cuisine\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 i\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fas fa-external-link-alt text-slate-300"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 a\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 a\cf0 \strokec5  \cf4 \strokec4 href\cf6 \strokec6 =\cf8 \strokec8 "https://www.google.com/maps/search/Red+Hot+Mamma+Leamington+Spa"\cf0 \strokec5  \cf4 \strokec4 target\cf6 \strokec6 =\cf8 \strokec8 "_blank"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "map-card bg-white p-5 rounded-2xl border flex justify-between items-center shadow-sm"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 div\cf6 \strokec6 ><\cf7 \strokec7 h4\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold"\cf6 \strokec6 >\cf0 \strokec5 Red Hot Mamma\cf6 \strokec6 </\cf7 \strokec7 h4\cf6 \strokec6 ><\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-xs text-orange-500"\cf6 \strokec6 >\cf0 \strokec5 Legendary Pizza\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 i\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fas fa-external-link-alt text-slate-300"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 a\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 section\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\
-\cb3             \cf13 \strokec13 <!-- RULES PAGE VIEW (The "Second" Page) -->\cf0 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 id\cf6 \strokec6 =\cf8 \strokec8 "page-rules"\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "page-view space-y-8 hidden"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 section\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "bg-white p-8 rounded-3xl border border-slate-100 shadow-sm"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 h2\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-3xl font-black mb-6 text-slate-900"\cf6 \strokec6 >\cf0 \strokec5 House Rules & Safety\cf6 \strokec6 </\cf7 \strokec7 h2\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                     \cb1 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "space-y-6"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex gap-4"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-10 h-10 bg-red-100 text-red-600 rounded-lg flex items-center justify-center shrink-0"\cf6 \strokec6 ><\cf7 \strokec7 i\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fas fa-smoking-ban"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 h4\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold text-slate-900"\cf6 \strokec6 >\cf0 \strokec5 No Smoking\cf6 \strokec6 </\cf7 \strokec7 h4\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm text-slate-500"\cf6 \strokec6 >\cf0 \strokec5 Smoking is strictly prohibited inside the house.\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex gap-4"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-10 h-10 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center shrink-0"\cf6 \strokec6 ><\cf7 \strokec7 i\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fas fa-swimmer"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 h4\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold text-slate-900"\cf6 \strokec6 >\cf0 \strokec5 Hot Tub\cf6 \strokec6 </\cf7 \strokec7 h4\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm text-slate-500"\cf6 \strokec6 >\cf0 \strokec5 The hot tub is currently out of service. Please do not remove the cover.\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\
-\cb3                         \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "flex gap-4"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center shrink-0"\cf6 \strokec6 ><\cf7 \strokec7 i\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "fas fa-volume-mute"\cf6 \strokec6 ></\cf7 \strokec7 i\cf6 \strokec6 ></\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 <\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 h4\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold text-slate-900"\cf6 \strokec6 >\cf0 \strokec5 Quiet Hours\cf6 \strokec6 </\cf7 \strokec7 h4\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                                 \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm text-slate-500"\cf6 \strokec6 >\cf0 \strokec5 Please respect our neighbors and keep noise down after 10 PM.\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                         \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 section\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\
-\cb3                 \cf6 \strokec6 <\cf7 \strokec7 div\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "p-6 bg-indigo-600 rounded-3xl text-white"\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 h4\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "font-bold mb-2"\cf6 \strokec6 >\cf0 \strokec5 Emergency?\cf6 \strokec6 </\cf7 \strokec7 h4\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                     \cf6 \strokec6 <\cf7 \strokec7 p\cf0 \strokec5  \cf4 \strokec4 class\cf6 \strokec6 =\cf8 \strokec8 "text-sm opacity-90"\cf6 \strokec6 >\cf0 \strokec5 Fire extinguisher is located in the kitchen. In case of emergency, call 999.\cf6 \strokec6 </\cf7 \strokec7 p\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3                 \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3             \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\
-\cb3         \cf6 \strokec6 </\cf7 \strokec7 main\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3     \cf6 \strokec6 </\cf7 \strokec7 div\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\
-\cb3     \cf6 \strokec6 <\cf7 \strokec7 script\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cb3         \cf9 \strokec9 const\cf0 \strokec5  sidebar = document.getElementById(\cf11 \strokec11 'sidebar'\cf0 \strokec5 );\cb1 \
-\cb3         \cf9 \strokec9 const\cf0 \strokec5  overlay = document.getElementById(\cf11 \strokec11 'overlay'\cf0 \strokec5 );\cb1 \
-\
-\cb3         \cf9 \strokec9 function\cf0 \strokec5  toggleSidebar(open) \{\cb1 \
-\cb3             \cf9 \strokec9 if\cf0 \strokec5  (open) \{\cb1 \
-\cb3                 sidebar.style.transform = \cf11 \strokec11 "translateX(0)"\cf0 \strokec5 ;\cb1 \
-\cb3                 overlay.classList.remove(\cf11 \strokec11 'hidden'\cf0 \strokec5 );\cb1 \
-\cb3                 setTimeout(() => overlay.style.opacity = \cf11 \strokec11 "1"\cf0 \strokec5 , \cf14 \strokec14 10\cf0 \strokec5 );\cb1 \
-\cb3             \} \cf9 \strokec9 else\cf0 \strokec5  \{\cb1 \
-\cb3                 sidebar.style.transform = \cf11 \strokec11 "translateX(-100%)"\cf0 \strokec5 ;\cb1 \
-\cb3                 overlay.style.opacity = \cf11 \strokec11 "0"\cf0 \strokec5 ;\cb1 \
-\cb3                 setTimeout(() => overlay.classList.add(\cf11 \strokec11 'hidden'\cf0 \strokec5 ), \cf14 \strokec14 300\cf0 \strokec5 );\cb1 \
-\cb3             \}\cb1 \
-\cb3         \}\cb1 \
-\
-\cb3         \cf13 \strokec13 /** * HANDLING MULTIPLE PAGES \cf0 \cb1 \strokec5 \
-\pard\pardeftab720\partightenfactor0
-\cf13 \cb3 \strokec13          * This function hides all "page-view" divs and only shows the one clicked.\cf0 \cb1 \strokec5 \
-\cf13 \cb3 \strokec13          */\cf0 \cb1 \strokec5 \
-\pard\pardeftab720\partightenfactor0
-\cf0 \cb3         \cf9 \strokec9 function\cf0 \strokec5  navigateTo(pageId) \{\cb1 \
-\cb3             \cf13 \strokec13 // Hide all pages\cf0 \cb1 \strokec5 \
-\cb3             document.querySelectorAll(\cf11 \strokec11 '.page-view'\cf0 \strokec5 ).forEach(p => p.classList.add(\cf11 \strokec11 'hidden'\cf0 \strokec5 ));\cb1 \
-\cb3             \cb1 \
-\cb3             \cf13 \strokec13 // Show selected page\cf0 \cb1 \strokec5 \
-\cb3             document.getElementById(\cf11 \strokec11 'page-'\cf0 \strokec5  + pageId).classList.remove(\cf11 \strokec11 'hidden'\cf0 \strokec5 );\cb1 \
-\cb3             \cb1 \
-\cb3             \cf13 \strokec13 // Scroll to top\cf0 \cb1 \strokec5 \
-\cb3             window.scrollTo(\cf14 \strokec14 0\cf0 \strokec5 , \cf14 \strokec14 0\cf0 \strokec5 );\cb1 \
-\
-\cb3             \cf13 \strokec13 // Close mobile menu\cf0 \cb1 \strokec5 \
-\cb3             \cf9 \strokec9 if\cf0 \strokec5  (window.innerWidth < \cf14 \strokec14 1024\cf0 \strokec5 ) toggleSidebar(\cf9 \strokec9 false\cf0 \strokec5 );\cb1 \
-\
-\cb3             \cf13 \strokec13 // Update URL Hash (Optional - helps with browser 'back' button)\cf0 \cb1 \strokec5 \
-\cb3             window.location.hash = pageId;\cb1 \
-\cb3         \}\cb1 \
-\
-\cb3         \cf13 \strokec13 // Initialize view based on URL hash (e.g. if user refreshes on #rules)\cf0 \cb1 \strokec5 \
-\cb3         window.onload = () => \{\cb1 \
-\cb3             \cf9 \strokec9 const\cf0 \strokec5  hash = window.location.hash.replace(\cf11 \strokec11 '#'\cf0 \strokec5 , \cf11 \strokec11 ''\cf0 \strokec5 );\cb1 \
-\cb3             \cf9 \strokec9 if\cf0 \strokec5  (hash === \cf11 \strokec11 'rules'\cf0 \strokec5 ) navigateTo(\cf11 \strokec11 'rules'\cf0 \strokec5 );\cb1 \
-\cb3             \cf9 \strokec9 else\cf0 \strokec5  navigateTo(\cf11 \strokec11 'home'\cf0 \strokec5 );\cb1 \
-\cb3         \};\cb1 \
-\cb3     \cf6 \strokec6 </\cf7 \strokec7 script\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\pard\pardeftab720\partightenfactor0
-\cf6 \cb3 \strokec6 </\cf7 \strokec7 body\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-\cf6 \cb3 \strokec6 </\cf7 \strokec7 html\cf6 \strokec6 >\cf0 \cb1 \strokec5 \
-}
+    <!-- Mobile Header -->
+    <header class="lg:hidden sticky top-0 z-[60] px-6 py-4 bg-white/95 backdrop-blur-md border-b flex justify-between items-center shadow-sm">
+        <div>
+            <h1 class="font-bold text-lg text-indigo-600">35 Villier St</h1>
+            <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Guest Guide</p>
+        </div>
+        <button onclick="toggleSidebar(true)" class="w-12 h-12 flex items-center justify-center text-2xl text-slate-600 bg-slate-50 rounded-full">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <div id="overlay" onclick="toggleSidebar(false)" class="fixed inset-0 bg-slate-900/60 z-[70] hidden backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+
+    <div class="flex min-h-screen">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="fixed inset-y-0 left-0 w-72 bg-white border-r z-[80] lg:relative lg:translate-x-0 -translate-x-full flex flex-col h-screen">
+            <div class="p-8">
+                <h1 class="font-bold text-2xl text-indigo-600 leading-tight">Guest Guide</h1>
+                <p class="text-sm text-slate-400">35 Villier Street</p>
+            </div>
+            
+            <div class="flex-1 px-4 space-y-1 overflow-y-auto">
+                <button onclick="navigateTo('home')" id="btn-home" class="nav-btn w-full flex items-center px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-600 transition-all">
+                    <i class="fas fa-map-marked-alt w-8 text-indigo-500"></i> Local Area
+                </button>
+                <button onclick="navigateTo('house')" id="btn-house" class="nav-btn w-full flex items-center px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-600 transition-all">
+                    <i class="fas fa-home w-8 text-indigo-500"></i> House Rules
+                </button>
+                <button onclick="navigateTo('dining')" id="btn-dining" class="nav-btn w-full flex items-center px-4 py-3 rounded-xl hover:bg-slate-50 text-slate-600 transition-all">
+                    <i class="fas fa-utensils w-8 text-indigo-500"></i> Eat & Drink
+                </button>
+            </div>
+            
+            <div class="p-6 border-t text-center">
+                <p class="text-[10px] text-slate-400 uppercase font-bold tracking-widest mb-2">Emergency</p>
+                <p class="text-xs font-bold text-red-500">Call 999 for Emergencies</p>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-1 w-full max-w-4xl mx-auto px-4 py-8 lg:py-16 pb-24">
+            
+            <!-- HOME PAGE -->
+            <div id="page-home" class="page-view space-y-10">
+                <section class="text-center py-10 bg-white rounded-3xl border border-slate-100 shadow-sm">
+                    <h2 class="text-3xl lg:text-5xl font-black mb-4 text-slate-900">Welcome!</h2>
+                    <p class="text-slate-500 max-w-md mx-auto px-6">Explore the best of Leamington Spa right from your doorstep.</p>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold mb-6 flex items-center"><i class="fas fa-parking mr-3 text-blue-500"></i> Parking</h3>
+                    <div class="bg-blue-50 border border-blue-100 p-6 rounded-2xl">
+                        <p class="text-sm text-blue-900 leading-relaxed"><strong>Free on-street parking</strong> is available right here on Villier Street. Be aware that as you move closer to the town centre, permits or payments are required.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold mb-6 flex items-center"><i class="fas fa-tree mr-3 text-green-500"></i> Parks & Outdoors</h3>
+                    <div class="grid gap-4">
+                        <div class="bg-white p-5 rounded-2xl border shadow-sm">
+                            <h4 class="font-bold">Villier Street Rec</h4>
+                            <p class="text-sm text-slate-500">3 min walk to the left. Great for dogs and has a children's play area.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border shadow-sm">
+                            <h4 class="font-bold">Jephson Gardens</h4>
+                            <p class="text-sm text-slate-500">Features a Japanese Garden, boat hire, and lovely tea rooms.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-slate-100 p-3 rounded-xl text-center text-[10px] font-bold uppercase">Victoria Park</div>
+                            <div class="bg-slate-100 p-3 rounded-xl text-center text-[10px] font-bold uppercase">Newbold Comyn</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="text-xl font-bold mb-6 flex items-center"><i class="fas fa-fort-awesome mr-3 text-purple-500"></i> Historic Castles</h3>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="bg-indigo-900 p-6 rounded-2xl text-white">
+                            <h4 class="font-bold mb-1">Warwick Castle</h4>
+                            <p class="text-xs text-indigo-200">~10 min drive. A world-famous historic fortress.</p>
+                        </div>
+                        <div class="bg-slate-800 p-6 rounded-2xl text-white">
+                            <h4 class="font-bold mb-1">Kenilworth Castle</h4>
+                            <p class="text-xs text-slate-300">~20 min drive. Stunning Elizabethan ruins.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- HOUSE PAGE -->
+            <div id="page-house" class="page-view space-y-10 hidden">
+                <section class="bg-white p-8 rounded-3xl border shadow-sm">
+                    <h2 class="text-2xl font-black mb-6">Stay Information</h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-tshirt"></i></div>
+                            <div>
+                                <h4 class="font-bold">Wardrobes</h4>
+                                <p class="text-sm text-slate-500">Front Bedroom has its own. Back Bedroom uses the wardrobe on the landing.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-thermometer-half"></i></div>
+                            <div>
+                                <h4 class="font-bold">Heating</h4>
+                                <p class="text-sm text-slate-500">The thermostat is located in the hall by the stairs.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-green-100 text-green-600 rounded-lg flex items-center justify-center shrink-0"><i class="fas fa-coffee"></i></div>
+                            <div>
+                                <h4 class="font-bold">Refreshments</h4>
+                                <p class="text-sm text-slate-500">Please help yourself to the provided Tea and Coffee.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="bg-red-600 p-8 rounded-3xl text-white">
+                    <h3 class="text-xl font-bold mb-4 flex items-center"><i class="fas fa-exclamation-triangle mr-3"></i> Important Rules</h3>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li class="flex items-start"><i class="fas fa-check-circle mr-3 mt-1"></i> <span><strong>Hot Tub:</strong> Not in use. Please do not uncover or try to use.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle mr-3 mt-1"></i> <span><strong>No Smoking:</strong> Strictly prohibited inside the house.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle mr-3 mt-1"></i> <span><strong>Quiet Hours:</strong> Respect neighbors after 10 PM.</span></li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- DINING PAGE -->
+            <div id="page-dining" class="page-view space-y-10 hidden">
+                <section>
+                    <h2 class="text-3xl font-black mb-2">Eat & Drink</h2>
+                    <p class="text-slate-500">Highly recommended local spots.</p>
+                </section>
+
+                <div class="space-y-4">
+                    <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest">Breakfast & Brunch</h4>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-white p-4 rounded-xl border text-sm font-bold">Steamhouse Depot</div>
+                        <div class="bg-white p-4 rounded-xl border text-sm font-bold">Fat Birds Café</div>
+                        <div class="bg-white p-4 rounded-xl border text-sm font-bold">Leif</div>
+                        <div class="bg-white p-4 rounded-xl border text-sm font-bold">WSK</div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest">Dinner Favourites</h4>
+                    <div class="grid gap-3">
+                        <div class="bg-white p-5 rounded-2xl border">
+                            <p class="text-[10px] font-bold text-indigo-500 uppercase mb-2">Pizza & Italian</p>
+                            <p class="font-bold mb-1">Red Hot Mamma <span class="text-slate-400 font-normal ml-2">Best Pizza in town!</span></p>
+                            <p class="font-bold border-t pt-2 mt-2 text-sm">La Coppola / Villa Capri</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border">
+                            <p class="text-[10px] font-bold text-indigo-500 uppercase mb-2">Asian Cuisine</p>
+                            <p class="font-bold">Hayashi / Natsuya <span class="text-slate-400 font-normal ml-2">(Japanese)</span></p>
+                            <p class="font-bold border-t pt-2 mt-2">5 Rivers / Herb <span class="text-slate-400 font-normal ml-2">(Indian)</span></p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border">
+                            <p class="text-[10px] font-bold text-indigo-500 uppercase mb-2">British Pubs</p>
+                            <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm font-bold">
+                                <span>The Fox & Vivian</span>
+                                <span>The Star and Garter</span>
+                                <span>The Drawing Board</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 rounded-3xl p-8 text-white text-center">
+                    <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-indigo-400">Evening Drinks & Music</h4>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span class="px-3 py-1.5 bg-white/10 rounded-lg text-xs">The Terrace</span>
+                        <span class="px-3 py-1.5 bg-white/10 rounded-lg text-xs">Fizzy Moon</span>
+                        <span class="px-3 py-1.5 bg-white/10 rounded-lg text-xs">Bedford Street</span>
+                        <span class="px-3 py-1.5 bg-white/10 rounded-lg text-xs">The Royal Pug</span>
+                        <span class="px-3 py-1.5 bg-white/10 rounded-lg text-xs">Wildes</span>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        function toggleSidebar(open) {
+            if (open) {
+                sidebar.style.transform = "translateX(0)";
+                overlay.classList.remove('hidden');
+                setTimeout(() => overlay.style.opacity = "1", 10);
+            } else {
+                sidebar.style.transform = "translateX(-100%)";
+                overlay.style.opacity = "0";
+                setTimeout(() => overlay.classList.add('hidden'), 300);
+            }
+        }
+
+        function navigateTo(pageId) {
+            document.querySelectorAll('.page-view').forEach(p => p.classList.add('hidden'));
+            document.getElementById('page-' + pageId).classList.remove('hidden');
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active-link'));
+            document.getElementById('btn-' + pageId).classList.add('active-link');
+            window.scrollTo(0, 0);
+            if (window.innerWidth < 1024) toggleSidebar(false);
+            window.location.hash = pageId;
+        }
+
+        window.onload = () => {
+            const hash = window.location.hash.replace('#', '');
+            if (['home', 'house', 'dining'].includes(hash)) navigateTo(hash);
+            else navigateTo('home');
+        };
+    </script>
+</body>
+</html>
